@@ -1,0 +1,88 @@
+/* Existing styles */
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+nav {
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none; /* Initially hide menu toggle */
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show menu toggle on smaller screens */
+    }
+
+    nav {
+        display: none; /* Initially hide nav */
+    }
+
+    nav.hidden {
+        display: none; /* Keep hidden if menuOpen is false */
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+    
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        padding: 10px 0; /* Optional: add some padding */
+    }
+    
+    nav a {
+        padding: 10px; /* Optional: add padding to links */
+        display: block; /* Make links full-width */
+    }
+}
